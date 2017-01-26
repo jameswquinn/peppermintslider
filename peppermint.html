@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <style>
+            .container {width: 1024px; margin: auto;}
+        </style>
+        <div class="container">
+        <div class="peppermint peppermint-inactive" id="peppermint">
+  <figure><img width="100%" src="http://www.theblogismine.com/wp-content/uploads/2009/11/iain-crawford-photography_9-570x366.jpg" alt="" ><figcaption>Hello world!!</figcaption></figure>
+
+  <figure><img width="100%" src="http://www.theblogismine.com/wp-content/uploads/2009/11/iain-crawford-photography_9-570x366.jpg" alt="" ></figure>
+
+  <figure><img width="100%" src="http://www.theblogismine.com/wp-content/uploads/2009/11/iain-crawford-photography_9-570x366.jpg" alt="" ></figure>
+</div>
+            
+            <button id="left-arr">left</button>
+            <button id="right-arr">right</button>
+            </div>
+        <script src="/js/main.js"></script>
+        <script>
+        //init Peppermint and save the API object
+var slider = Peppermint(document.getElementById('peppermint')),
+    //save links to HTML nodes
+    rightArr = document.getElementById('right-arr'),
+    leftArr = document.getElementById('left-arr'),
+    getSlidesNumberButton = document.getElementById('getslidesnumber');
+
+//click `#right-arr` to go to the next slide
+rightArr.addEventListener('click', slider.next, false);
+
+//click `#left-arr` to go to the previous slide
+leftArr.addEventListener('click', slider.prev, false);
+
+//click `#getslidesnumber` to alert total number of slides
+getSlidesNumberButton.addEventListener('click', function() {
+  alert('There are ' + slider.getSlidesNumber() + ' slides');
+}, false);
+        </script>
+            
+    </body>
+
+</html>
